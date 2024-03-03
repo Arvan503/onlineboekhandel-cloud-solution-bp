@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #017BFF;
+            padding: 20px 20px; /* Added padding to the left and right */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        header img {
+            max-height: 50px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center content horizontally */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        section img {
+            max-width: 50%;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        section div {
+            max-width: 50%;
+        }
+
+        section div p {
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: lightgray;
+            color: #333;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="your_logo.png" alt="Logo">
+    <nav>
+        <a href="#">Books</a>
+        <a href="#">Users</a>
+        <a href="#">About</a>
+    </nav>
+</header>
+
+<section>
+    <img src="https://www.orangesuriname.com/wp-content/uploads/2023/12/blacmk.png" alt="About Image">
+    <div>
+        <h2>About Us</h2>
+        <p>Your description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2024 Arvan Jagroep
+</footer>
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Create Employee</title>-->
+<!--    &lt;!&ndash; Include Bootstrap CSS &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+<!--    &lt;!&ndash; Include jQuery &ndash;&gt;-->
+<!--    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>-->
+<!--</head>-->
+<!--<body class="container mt-5">-->
+
+<!--<h2>Create Book</h2>-->
+
+<!--<form id="bookForm">-->
+<!--    <div class="form-group">-->
+<!--        <label for="title">title:</label>-->
+<!--        <input type="text" class="form-control" id="title" name="title" required>-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--        <label for="author">Author:</label>-->
+<!--        <input type="text" class="form-control" id="author" name="author" required>-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--        <label for="genre">Genre:</label>-->
+<!--        <input type="text" class="form-control" id="genre" name="genre" required>-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--        <label for="description">description:</label>-->
+<!--        <input type="text" class="form-control" id="description" name="description" required>-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--        <label for="price">price:</label>-->
+<!--        <input type="tel" class="form-control" id="price" name="price" required>-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--        <label for="stockQuantity">stockQuantity:</label>-->
+<!--        <input type="tel" class="form-control" id="stockQuantity" name="stockQuantity" required>-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--        <label for="publicationDate">publicationDate:</label>-->
+<!--        <input type="tel" class="form-control" id="publicationDate" name="publicationDate" required>-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--        <label for="isbnNumber">isbnNumber:</label>-->
+<!--        <input type="tel" class="form-control" id="isbnNumber" name="isbnNumber" required>-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--        <label for="copy">copy:</label>-->
+<!--        <input type="tel" class="form-control" id="copy" name="copy" required>-->
+<!--    </div>-->
+
+<!--    <button type="button" class="btn btn-primary" onclick="saveBook()">Save</button>-->
+<!--</form>-->
+
+<!--&lt;!&ndash; Include Bootstrap JS (popper.js and bootstrap.js) if needed &ndash;&gt;-->
+<!--&lt;!&ndash; <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script> &ndash;&gt;-->
+<!--&lt;!&ndash; <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> &ndash;&gt;-->
+<!--&lt;!&ndash; <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> &ndash;&gt;-->
+
+<!--<script>-->
+<!--    function saveBook() {-->
+<!--        // Get values from the form-->
+<!--        var title = $("#title").val();-->
+<!--        var author = $("#author").val();-->
+<!--        var genre = $("#genre").val();-->
+<!--        var description = $("#description").val();-->
+<!--        var price = $("#price").val();-->
+<!--        var stockQuantity = $("#stockQuantity").val();-->
+<!--        var publicationDate = $("#publicationDate").val();-->
+<!--        var isbnNumber = $("#isbnNumber").val();-->
+<!--        var copy = $("#copy").val();-->
+
+
+<!--        // Create employee object-->
+<!--        var employee = {-->
+<!--            title: title,-->
+<!--            author: author,-->
+<!--            genre: genre,-->
+<!--            description: description,-->
+<!--            price: price,-->
+<!--            stockQuantity: stockQuantity,-->
+<!--            publicationDate: publicationDate,-->
+<!--            isbnNumber: isbnNumber,-->
+<!--            copy: copy-->
+
+<!--        };-->
+
+<!--        // Make a POST request to your API-->
+<!--        $.ajax({-->
+<!--            type: "POST",-->
+<!--            url: "your_api_endpoint_url",-->
+<!--            contentType: "application/json",-->
+<!--            data: JSON.stringify(book),-->
+<!--            success: function (response) {-->
+<!--                console.log("Book saved successfully:", response);-->
+<!--                alert("Book saved successfully!");-->
+<!--            },-->
+<!--            error: function (error) {-->
+<!--                console.error("Error saving employee:", error);-->
+<!--                alert("Error saving employee. Please try again.");-->
+<!--            }-->
+<!--        });-->
+<!--    }-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
