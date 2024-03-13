@@ -21,19 +21,27 @@ public class BookController {
     }
 
 
-    @Path("/hello")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String helloWorld(){
         return "Hello World";
     }
 
+    @Path("/all")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Book> getBooks(){
         return bookService.getBooks();
     }
 
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Book getBookById(@PathParam("id") Long bookId) {
+        return bookService.getBookById(bookId);
+    }
+
+    @Path("/create")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -42,18 +50,19 @@ public class BookController {
         return Response.ok(book, MediaType.APPLICATION_JSON_TYPE).build();
     }
 
-    @PUT
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response updateBook(Book book) {
-        book = bookService.updateBook(book);
-
-        if (book != null) {
-            return Response.ok(book, MediaType.APPLICATION_JSON_TYPE).build();
-        } else {
-            return Response.status(Response.Status.NOT_FOUND).build();
-        }
-    }
+//    @Path("/update")
+//    @PUT
+//    @Consumes(MediaType.APPLICATION_JSON)
+//    @Produces(MediaType.APPLICATION_JSON)
+//    public Response updateBook(Book book) {
+//        book = bookService.updateBook(book);
+//
+//        if (book != null) {
+//            return Response.ok(book, MediaType.APPLICATION_JSON_TYPE).build();
+//        } else {
+//            return Response.status(Response.Status.NOT_FOUND).build();
+//        }
+//    }
 
     @DELETE
     @Path("/{bookId}")
@@ -67,4 +76,25 @@ public class BookController {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
     }
+
+
+    @PUT
+    @Path("/update")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response updateBook(Book book) {
+        Book updatedBook = bookService.updateBook(book);
+        return Response.ok(updatedBook, MediaType.APPLICATION_JSON_TYPE).build();
+    }
+
+    @PUT
+    @Path("/update/{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response updateBookById(@PathParam("id") Long bookId, Book updatedBook) {
+        Book result = bookService.updateBookById(bookId, updatedBook);
+        return Response.ok(result, MediaType.APPLICATION_JSON_TYPE).build();
+    }
 }
+
+

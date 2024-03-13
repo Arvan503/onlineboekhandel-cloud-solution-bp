@@ -1,13 +1,12 @@
 package sr.qualogy.service;
 
-import jakarta.persistence.EntityManager;
 import sr.qualogy.configuration.JPAConfiguration;
 import sr.qualogy.entity.Book;
 import sr.qualogy.repository.BookRepository;
 
 import java.util.List;
 
-public class BookService {
+public class BookService implements BookServiceInterface {
 
     private final BookRepository bookRepository;
 
@@ -32,4 +31,11 @@ public class BookService {
         return bookRepository.deleteBook(id);
     }
 
+    public Book updateBookById(Long bookId, Book updatedBook) {
+        return bookRepository.updateBookById(bookId, updatedBook);
+    }
+
+    public Book getBookById(Long bookId) {
+        return bookRepository.getBookById(bookId);
+    }
 }
